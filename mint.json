@@ -55,7 +55,8 @@
     {
       "group": "Chains",
       "pages": [
-        "api-reference/chains/build",
+        "api-reference/chains/create",
+        "api-reference/chains/run",
         "api-reference/chains/delete"
       ]
     }

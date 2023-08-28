@@ -1,0 +1,24 @@
+---
+title: "Run"
+description: "This runs a chain "
+api: "GET /v1/chain"
+---
+
+### Request
+
+<ParamField query="id" type="string" required>
+    chain ID to run
+</ParamField>
+
+
+<ParamField query="prompt" type="string" required>
+    Question, prompt, etc. 
+</ParamField>
+
+### Response
+
+<ResponseField name="msg" type="string" required>
+  Response
+</ResponseField>
+
+
