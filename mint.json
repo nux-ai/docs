@@ -8,6 +8,9 @@
   "api": {
     "baseUrl": ["https://api.nux.ai"]
   },
+  "primaryTab": {
+    "name": "asdasd"
+  },
   "colors": {
     "primary": "#FC5185",
     "light": "#FFA0BD",
@@ -21,45 +24,64 @@
   "topbarLinks": [
     {
       "name": "Talk to Engineers",
-      "url": "https://mixpeek.com/contact"
+      "url": "https://nux.ai/contact"
     }
   ],
   "topbarCtaButton": {
     "name": "Use NUX",
-    "url": "https://mixpeek.com/start"
+    "url": "https://nux.ai/start"
   },
   "anchors": [
     {
       "name": "Guides",
       "icon": "book-bookmark",
-      "url": "https://mixpeek.com/learn"
+      "url": "https://nux.ai/guides"
     },
     {
       "name": "Security",
       "icon": "shield-halved",
-      "url": "https://mixpeek.com/security"
+      "url": "https://nux.ai/security"
     },
     {
-      "name": "Demo App",
+      "name": "Templates",
       "icon": "eye",
-      "url": "https://demo.mixpeek.com/files?defaultSearch=system"
+      "url": "https://nux.ai/templates"
     }
   ],
   "navigation": [
     {
       "group": "Introduction",
       "pages": [
-        "introduction/faq"
+        "introduction/quickstart",
+        "introduction/faq",
+        "introduction/glossary"
       ]
     },
     {
-      "group": "Chains",
+      "group": "Chain",
       "pages": [
-        "api-reference/chains/create",
-        "api-reference/chains/run",
-        "api-reference/chains/delete"
+        "api-reference/chain/create",
+        "api-reference/chain/get",
+        "api-reference/chain/run",
+        "api-reference/chain/delete",
+        "api-reference/chain/list",
+        "api-reference/chain/iterate"
       ]
-    }
+    },
+    {
+      "group": "Source",
+      "pages": [
+        "api-reference/source/create",
+        "api-reference/source/list",
+        "api-reference/source/get"
+      ]
+    },
+    {
+      "group": "Stream",
+      "pages": [
+        "api-reference/stream/listen"
+      ]
+    }      
   ],
   "footerSocials": {
     "website": "https://nux.ai/",
