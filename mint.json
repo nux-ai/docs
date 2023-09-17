@@ -1,12 +1,12 @@
 {
-  "name": "NUX.ai",
+  "name": "⛰ nux.ai",
   "favicon": "/favicon.png",
-  "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
-  },
   "api": {
-    "baseUrl": ["https://api.nux.ai"]
+    "baseUrl": ["https://api.nux.ai"],
+    "auth": {
+      "method": "key",
+      "name": "Authorization"
+    }
   },
   "primaryTab": {
     "name": "asdasd"
@@ -33,9 +33,9 @@
   },
   "anchors": [
     {
-      "name": "Guides",
+      "name": "Explore Chains",
       "icon": "book-bookmark",
-      "url": "https://nux.ai/guides"
+      "url": "https://nux.ai/explore"
     },
     {
       "name": "Security",
@@ -43,9 +43,9 @@
       "url": "https://nux.ai/security"
     },
     {
-      "name": "Templates",
+      "name": "Learning Center",
       "icon": "eye",
-      "url": "https://nux.ai/templates"
+      "url": "https://nux.ai/learn"
     }
   ],
   "navigation": [
