@@ -77,6 +77,13 @@
       ]
     },
     {
+      "group": "Models",
+      "pages": [
+        "api-reference/model/list",
+        "api-reference/model/get"
+      ]
+    },    
+    {
       "group": "Stream",
       "pages": [
         "api-reference/stream/listen"
