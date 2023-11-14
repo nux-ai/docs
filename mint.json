@@ -23,17 +23,17 @@
   },
   "topbarLinks": [
     {
-      "name": "Talk to Engineers",
+      "name": "Talk to an Engineer",
       "url": "https://nux.ai/contact"
     }
   ],
   "topbarCtaButton": {
-    "name": "Use NUX",
+    "name": "Build a NUX Workbook",
     "url": "https://nux.ai/start"
   },
   "anchors": [
     {
-      "name": "Explore Chains",
+      "name": "Explore Templates",
       "icon": "book-bookmark",
       "url": "https://nux.ai/explore"
     },
@@ -53,42 +53,52 @@
       "group": "Introduction",
       "pages": [
         "introduction/quickstart",
-        "introduction/faq",
         "introduction/glossary"
       ]
     },
     {
-      "group": "Chain",
+      "group": "Workbooks",
       "pages": [
-        "api-reference/chain/create",
-        "api-reference/chain/get",
-        "api-reference/chain/run",
-        "api-reference/chain/delete",
-        "api-reference/chain/list",
-        "api-reference/chain/iterate"
+        "workbooks/intro",
+        "workbooks/version",
+        "workbooks/deploy"
       ]
     },
     {
-      "group": "Source",
+      "group": "Stages",
       "pages": [
-        "api-reference/source/create",
-        "api-reference/source/list",
-        "api-reference/source/get"
+        "stages/intro",
+        "stages/variables",
+        "stages/configure",
+        "stages/snapshots"
       ]
     },
     {
-      "group": "Models",
+      "group": "Model Inference",
+      "icon": "code",
       "pages": [
-        "api-reference/model/list",
-        "api-reference/model/get"
+        "model-inference/intro",
+        "model-inference/managed",
+        "model-inference/custom",
+        "model-inference/configure"
       ]
     },    
     {
-      "group": "Stream",
+      "group": "Code Execution",
       "pages": [
-        "api-reference/stream/listen"
+        "code-execution/intro",
+        "code-execution/configure"
       ]
-    }      
+    },
+    {
+      "group": "Data Integration",
+      "pages": [
+        "data-integration/intro",
+        "data-integration/knn",
+        "data-integration/api",
+        "data-integration/database"
+      ]
+    }        
   ],
   "footerSocials": {
     "website": "https://nux.ai/",

@@ -4,28 +4,31 @@ icon: "book"
 # description: "Terms to know to use NUX"
 ---
 
+### Primitives
+<Tabs>
+  <Tab title="Workbook">
+    A NUX Workbook organizes and links stages within a workflow. It's a platform for creating, managing, and executing complex workflows, offering customization to suit different data processing and analytical needs. 
+    
+    Workbooks can be versioned, configured and deployed then executed via API. 
+  </Tab>
+  <Tab title="Stage">
+    Stages are the building blocks of NUX Workbooks. They are capable of performing functions like code execution, model inference, or data integrations. Stages are designed to be interconnected, facilitating the creation of complex, multi-step workflows.
 
-#### Chain
-A core concept in the NUX platform, a chain is a series of stages linked together. You can link the output of searches into the input of models with any combination to build impressive, custom AI workflows.
+    When importing stages, users select `versions` and can be configured then run within a workbook or standalone. Each time you run a stage, a replayable `snapshot` is saved.
+  </Tab>
+</Tabs>
 
-#### Stage
-Stages are blocks of logic that combine to form a chain. They can be searches, text_to_text models, text_to_image, and so on. See the FAQ page for a comprehensive list of supported models.
+---
 
-#### Source
-Sources are how you customize NUX chains with your own data. They can be files, websites, and more. See the FAQ for a comprehensive list. 
-
-#### Iterator
-Some inputs are too large to process through models so you need to use iterators. Iterators are ways of splitting up an input (for example a video) into parts, and running each part through a chain.
-
-#### Stream
-Activities like text_to_video and text_to_audio can take time to process, so you can use the stream API to listen in on updates
-
-
-#### Deployment
-Once your chain is ready and you're happy with the results, you can deploy it using one of 4 methods: 
-
-- API
-- ChatBot
-- WebHook
-- Dedicated Hub
-
+### Stage Types
+<Tabs>
+  <Tab title="Model Inference">
+    Model Inference in NUX Workbooks involves using machine learning models for data analysis and predictions. It enables the application of algorithms like language models or image recognition within a workflow.
+  </Tab>
+  <Tab title="Code Execution">
+    The Code Execution Stage in NUX Workbooks allows for running custom code, supporting various programming languages. It's used for data manipulation, transformation, and specific computational tasks.
+  </Tab>
+  <Tab title="Data Integration">
+    The Data Integration Stage in NUX Workbooks enables connecting to and using data from different sources, including KNN data stores, external APIs, and databases. It's crucial for integrating external data for analysis, decision-making, and automation in real-time workflows.
+  </Tab>  
+</Tabs>
