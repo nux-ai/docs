@@ -1,5 +1,5 @@
 {
-  "name": "⛰ nux.ai",
+  "name": "🔗 NUX.ai",
   "favicon": "/favicon.png",
   "api": {
     "baseUrl": ["https://api.nux.ai"],
@@ -9,13 +9,13 @@
     }
   },
   "colors": {
-    "primary": "#FC5185",
-    "light": "#FFA0BD",
-    "dark": "#364F6B",
-    "ultraLight": "#ECD3DF",
-    "ultraDark": "#18283A",
+    "primary": "#9EC8B9",
+    "light": "#9EC8B9",
+    "dark": "#092635",
+    "ultraLight": "#9EC8B9",
+    "ultraDark": "#061c26",
     "background": {
-      "dark": "#121212"
+      "dark": "#061c26"
     }
   },
   "topbarLinks": [
@@ -44,14 +44,19 @@
       "url": "https://nux.ai/explore"
     },
     {
+      "name": "Compare Models",
+      "icon": "scale-balanced",
+      "url": "https://nux.ai/compare"
+    },    
+    {
+      "name": "Learning Center",
+      "icon": "brain",
+      "url": "https://nux.ai/learn"
+    },    
+    {
       "name": "Security",
       "icon": "shield-halved",
       "url": "https://nux.ai/security"
-    },
-    {
-      "name": "Learning Center",
-      "icon": "eye",
-      "url": "https://nux.ai/learn"
     }
   ],
   "navigation": [
@@ -71,12 +76,12 @@
       ]
     },
     {
-      "group": "Stages",
+      "group": "Blocks",
       "pages": [
-        "main/stages/intro",
-        "main/stages/variables",
-        "main/stages/configure",
-        "main/stages/snapshots"
+        "main/blocks/intro",
+        "main/blocks/variables",
+        "main/blocks/configure",
+        "main/blocks/versions"
       ]
     },
     {
