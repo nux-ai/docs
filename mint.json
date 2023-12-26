@@ -20,21 +20,15 @@
   },
   "topbarLinks": [
     {
-      "name": "Talk to an Engineer",
+      "name": "Contact",
       "url": "https://nux.ai/contact"
     }
   ],
   "primaryTab": {
     "name": "Documentation"
   },  
-  "tabs": [
-    {
-        "name": "API References",
-        "url": "api"
-    }
-],
   "topbarCtaButton": {
-    "name": "Build a NUX Workbook",
+    "name": "Start Building",
     "url": "https://nux.ai/start"
   },
   "anchors": [
@@ -42,12 +36,7 @@
       "name": "Explore Templates",
       "icon": "book-bookmark",
       "url": "https://nux.ai/explore"
-    },
-    {
-      "name": "Compare Models",
-      "icon": "scale-balanced",
-      "url": "https://nux.ai/compare"
-    },    
+    },  
     {
       "name": "Learning Center",
       "icon": "brain",
@@ -71,7 +60,6 @@
       "group": "Workbooks",
       "pages": [
         "main/workbooks/intro",
-        "main/workbooks/version",
         "main/workbooks/deploy"
       ]
     },
@@ -79,41 +67,37 @@
       "group": "Blocks",
       "pages": [
         "main/blocks/intro",
-        "main/blocks/variables",
-        "main/blocks/configure",
-        "main/blocks/versions"
+        "main/blocks/configure"
       ]
     },
     {
-      "group": "Model Inference",
+      "group": "Models",
       "icon": "code",
       "pages": [
-        "main/model-inference/intro",
-        "main/model-inference/managed",
-        "main/model-inference/custom",
-        "main/model-inference/configure"
+        "main/models/intro",
+        "main/models/managed",
+        "main/models/custom",
+        "main/models/configure"
       ]
     },    
     {
-      "group": "Code Execution",
+      "group": "Code",
       "pages": [
-        "main/code-execution/intro",
-        "main/code-execution/configure"
+        "main/code/intro",
+        "main/code/configure"
       ]
     },
     {
-      "group": "Data Integration",
+      "group": "Data",
       "pages": [
-        "main/data-integration/intro",
-        "main/data-integration/knn",
-        "main/data-integration/api",
-        "main/data-integration/database"
+        "main/data/intro",
+        "main/data/configure",
+        {
+          "group": "Loaders",
+          "pages": ["main/data/loaders/intro"]
+      }        
       ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api/introduction/quickstart"]
-    }         
+    }   
   ],
   "footerSocials": {
     "website": "https://nux.ai/",
