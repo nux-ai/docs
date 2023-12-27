@@ -92,6 +92,7 @@
       "pages": [
         "main/data/intro",
         "main/data/configure",
+        "main/data/sync",
         {
           "group": "Loaders",
           "pages": ["main/data/loaders/intro"]
