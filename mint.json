@@ -2,7 +2,9 @@
   "name": "🔗 NUX.ai",
   "favicon": "/favicon.png",
   "api": {
-    "baseUrl": ["https://api.nux.ai"],
+    "baseUrl": [
+      "https://api.nux.ai"
+    ],
     "auth": {
       "method": "key",
       "name": "Authorization"
@@ -26,7 +28,7 @@
   ],
   "primaryTab": {
     "name": "Documentation"
-  },  
+  },
   "topbarCtaButton": {
     "name": "Start Building",
     "url": "https://nux.ai/start"
@@ -36,12 +38,12 @@
       "name": "Explore Templates",
       "icon": "book-bookmark",
       "url": "https://nux.ai/explore"
-    },  
+    },
     {
       "name": "Learning Center",
       "icon": "brain",
       "url": "https://nux.ai/learn"
-    },    
+    },
     {
       "name": "Security",
       "icon": "shield-halved",
@@ -75,16 +77,8 @@
       "icon": "code",
       "pages": [
         "main/models/intro",
-        "main/models/managed",
-        "main/models/custom",
+        "main/models/supported",
         "main/models/configure"
-      ]
-    },    
-    {
-      "group": "Code",
-      "pages": [
-        "main/code/intro",
-        "main/code/configure"
       ]
     },
     {
@@ -92,13 +86,16 @@
       "pages": [
         "main/data/intro",
         "main/data/configure",
-        "main/data/sync",
-        {
-          "group": "Loaders",
-          "pages": ["main/data/loaders/intro"]
-      }        
+        "main/data/loaders/intro"
       ]
-    }   
+    },
+    {
+      "group": "Code",
+      "pages": [
+        "main/code/intro",
+        "main/code/configure"
+      ]
+    }
   ],
   "footerSocials": {
     "website": "https://nux.ai/",
