@@ -26,9 +26,6 @@
       "url": "https://nux.ai/contact"
     }
   ],
-  "primaryTab": {
-    "name": "Documentation"
-  },
   "topbarCtaButton": {
     "name": "Start Building",
     "url": "https://nux.ai/start"
@@ -48,6 +45,12 @@
       "name": "Security",
       "icon": "shield-halved",
       "url": "https://nux.ai/security"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
     }
   ],
   "navigation": [
