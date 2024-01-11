@@ -4,26 +4,29 @@ icon: "book"
 # description: "Terms to know to use NUX"
 ---
 
-# Primitives
+<img src="../../images/wb_diagram.png"/>
+
 
 ### Workbooks
-A NUX Workbook organizes and links blocks within a workflow. It's a platform for creating, managing, and executing complex workflows, offering customization to suit different data processing and analytical needs. 
-Workbooks can be versioned, configured and deployed then executed via API. 
+A NUX Workbook organizes and links blocks within a sequential chain. Think of it like a Jupyter Notebook interface with a Zapier chaining experience that you can then call via API. 
+
+Users can test and experiment workbooks within the NUX Workbook builder then integrate it into their software via API.
+
+Users can supply request parameters when calling their workbook, so that each workbook is fully modular. 
 
 ### Blocks
-Blocks are the building blocks of NUX Workbooks. They are capable of performing functions like code execution, model inference, or data integrations. Blocks are designed to be interconnected, facilitating the creation of complex, multi-step workflows.
+Blocks make up NUX Workbooks. They are capable of performing functions like **code execution**, **model inference**, or **data processing**. Blocks are designed to be interconnected, facilitating the creation of complex, multi-step chains.
 
-When importing blocks, users select `versions` and can be configured then run within a workbook or standalone. Each time you run a block, a replayable `snapshot` is saved.
+The output of each block is accessible across the entire workbook via handlebar tags and standard dot notation: `{{stage_name.key}}`
 
 ---
 
-# Block Types
 
 ### Model Inference
-Model Inference in NUX Workbooks involves using machine learning models for data analysis and predictions. It enables the application of algorithms like language models or image recognition within a workflow.
+Model Inference in NUX Workbooks involves using machine learning models for data analysis and predictions. It enables the application of algorithms like language models or image recognition within a workflow. Users can use managed models like GPT and Claude or bring their own like a fine-tuned LLama2 model. 
 
 ### Code Execution
-The Code Execution Blocks in NUX Workbooks allows for running custom code, supporting various programming languages. It's used for data manipulation, transformation, and specific computational tasks.
+The Code Execution Blocks in NUX Workbooks allows for running custom _glue code_. It's often used for data manipulation, transformation, and specific computational tasks. Packages such as _pandas, requests, and scikit_ can be added to a code block. 
 
 ### Data Integration
-The Data Integration Blocks in NUX Workbooks enables connecting to and using data from different sources, including KNN data stores, external APIs, and databases. It's crucial for integrating external data for analysis, decision-making, and automation in real-time workflows.
+The Data Integration Blocks in NUX Workbooks enables connecting to and using data from different sources. This includes KNN data stores like Weaviate and Pinecone, external APIs (GET & POST), and databases.

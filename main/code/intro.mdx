@@ -2,3 +2,57 @@
 title: "Introduction to Code"
 icon: "brackets-curly"
 ---
+
+Each code block is treated as a function and must be defined with two parameters: `parameters` and `blocks` like:
+
+``` python
+def function(parameters, blocks):
+    return "hello world"
+```
+
+## Parameters
+
+You can access the parameters from the workbook via standard dot notation inside template tags.
+
+For example, if you call your workbook with parameters: `{"url": "google.com"}` then you can access `google.com` via `{{parameters.url}}` like:
+
+``` python
+def function(parameters, blocks):
+    return {{parameters.url}}
+```
+
+## Blocks
+
+Similarly, previous block outputs are accessible via template tags like `{{block_name.key}}`.
+
+See the example below where the first block called `cell_one` has a nested array of objects and we're accessing `f[2]["foo3"]["foo4"]`
+
+#### Block 1: cell_one
+
+``` python
+def function(parameters, blocks):
+  f = [
+    {"foo": "bar"},
+    {"foo2": "bar2"},
+    {"foo3": {"foo4": "bar4"}}
+  ]
+  return f
+```
+
+returns:
+
+```json
+[{"foo":"bar"},{"foo2":"bar2"},{"foo3":{"foo4":"bar4"}}]
+```
+
+#### Block 1: cell_two
+
+```python
+def function(parameters, blocks):
+    return {{blocks.cell_one.2.foo3.foo4}}
+```
+returns: 
+
+```json
+"bar4"
+```
