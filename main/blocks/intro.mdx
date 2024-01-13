@@ -2,3 +2,45 @@
 title: "Introduction to Blocks"
 icon: "cube"
 ---
+
+Blocks are contained pieces of logic that can consist of data, model or code.
+
+All blocks have `inputs`, `settings`, and `response_output`
+
+## Inputs
+
+Inputs for the block
+
+## Settings
+
+Settings for the block
+
+## Response Output
+
+Output you'd like the block to adhere to. This is critical to ensuring each block's execution durability. 
+
+
+## Variables
+
+
+Every block has access to `parameters`, and `blocks`.
+
+### Parameters
+
+When calling your workbook, you send parameters via HTTP like:
+
+```sh
+curl --location 'https://api.nux.ai/v1/run/workbook/{WORKBOOK_ID}' \
+--header 'Authorization: Bearer {API_KEY}' \
+--data '{
+    "parameters": {
+        "key": "value"
+    }
+}'
+```
+
+You can then access the the key's value in your blocks via standard handlebar tags: `{{parameters.key}}`
+
+### Blocks
+
+This is the execution context of the workbook. Similar to how when you build a Jupyter notebook of cells, the variables are shared between eachother. You can pass these variables via `{{blocks.cell_name.key}}`

@@ -1,0 +1,19 @@
+---
+title: "Introduction to Workflows"
+---
+
+Workflows allow you to run batch processes of your workbook. 
+
+For example, say you want to run a CSV through your workbook. You can simply upload your CSV to the workflow endpoint: `https://api.nux.ai/v1/workflows/workbook/{WORKBOOK_ID}`.
+
+This will return your `workflow_id`, like: 
+
+```json
+{
+    "workflow_id": "0cdd2e96-c890-4e6c-a5f0-7de639d030c0"
+}
+```
+
+This will then open an asynchronous task queue.
+
+You can then poll the status of this queue via `https://api.nux.ai/v1/workflows/status/{WORKFLOW_ID}`

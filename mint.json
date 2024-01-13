@@ -47,12 +47,6 @@
       "url": "https://nux.ai/security"
     }
   ],
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "navigation": [
     {
       "group": "Introduction",
@@ -72,31 +66,47 @@
       "group": "Blocks",
       "pages": [
         "main/blocks/intro",
-        "main/blocks/configure"
+        {
+          "group": "Model Inference",
+          "pages": [
+            "main/models/intro",
+            "main/models/supported",
+            "main/models/configure"
+          ]
+        },
+        {
+          "group": "Data Integration",
+          "pages": [
+            "main/data/intro",
+            "main/data/configure",
+            "main/data/loaders/intro"
+          ]
+        },
+        {
+          "group": "Code Execution",
+          "pages": [
+            "main/code/intro",
+            "main/code/configure"
+          ]
+        }
       ]
     },
     {
-      "group": "Models",
-      "icon": "code",
+      "group": "Workflows",
       "pages": [
-        "main/models/intro",
-        "main/models/supported",
-        "main/models/configure"
+        "main/workflows/intro"
       ]
     },
     {
-      "group": "Data",
+      "group": "Triggers",
       "pages": [
-        "main/data/intro",
-        "main/data/configure",
-        "main/data/loaders/intro"
+        "main/triggers/intro"
       ]
     },
     {
-      "group": "Code",
+      "group": "Synchronize",
       "pages": [
-        "main/code/intro",
-        "main/code/configure"
+        "main/synchronize/intro"
       ]
     }
   ],

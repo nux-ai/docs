@@ -2,3 +2,66 @@
 title: "Introduction to Workbooks"
 icon: "book-open"
 ---
+
+Under the hood, workbooks are an LLM-powered DAG (Directed Acyclic Graph). 
+Each block in the workbook is a `node` in the DAG, where the output of other blocks and the workbook's request parameters (when called) are the `edges`.
+
+This is powerful because if a block's execution fails other blocks can still run if they don't depend on the block that failed.
+
+To run a workbook, simply send parameters to `/v1/run` with your `workbook_id`:
+
+```sh
+curl --location 'https://api.nux.ai/v1/run/workbook/{WORKBOOK_ID}' \
+--header 'Authorization: Bearer {API_KEY}' \
+--data '{
+    "parameters": {
+        "url": "s3://some_file_url.pdf"
+    }
+}'
+```
+
+Once complete it will return an array of objects that contain each block's output:
+
+```json
+{
+    "created_at": "2024-01-12T20:30:17.585000",
+    "data": [
+        {
+            "block_id": "1a5e71",
+            "cell_name": "extract_content",
+            "response": "lorem ipsum...",
+            "metadata": {
+                "block_type": "code",
+                "block_subtype": "python",
+                "content_type": "text/plain",
+                "runtime": 1583.775390625
+            },
+            "run_at": "2024-01-12T20:30:19.883000"
+        },
+        {
+            "block_id": "3e475d",
+            "cell_name": "structured_output",
+            "response": {},
+            "metadata": {
+                "block_type": "model",
+                "block_subtype": "gpt",
+                "content_type": "application/json",
+                "output_token_count": 5293,
+                "input_token_count": 4728,
+                "runtime": 8711.36962890625
+            },
+            "run_at": "2024-01-12T20:30:28.668000"
+        }
+    ],
+    "run_id": "b15e202a-c567-4075-bfce-fb5b175661cc"
+}
+```
+
+
+### Streaming
+
+When you call a workbook, sometimes it can take longer to run. To receive streaming updates create a `websocket_id` via `/v1/ws/`
+
+Then when you can the workbook, supply the `websocket_id` in the parameters like `?websocket_id={ID}`
+
+Then open a websocket like: `ws://api.nux.ai/ws/{ID}` and block execution outputs will be streamed in real-time.  
