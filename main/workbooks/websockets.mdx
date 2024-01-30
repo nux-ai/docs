@@ -5,7 +5,7 @@ icon: "plug"
 
 In some cases, the execution of blocks in a workbook run can take more time. This could be due to complex computations, large data processing, or other resource-intensive tasks. In such scenarios, waiting for the completion of the run to get the results might not be the most efficient approach.
 
-By using webhooks, you can set up your application to be notified when the run is completed. This allows your application to continue with other tasks without being blocked by the long-running process.
+By using webhooks, you can set up your application to receive the output of blocks in a workbook as they're complete. This means you don't have to wait until the entire workbook is finished in order to process the response. 
 
 ```javascript
 // Define the URL and headers
