@@ -10,6 +10,9 @@
       "name": "Authorization"
     }
   },
+  "modeToggle": {
+    "default": "light"
+  },
   "colors": {
     "primary": "#9EC8B9",
     "light": "#9EC8B9",
@@ -59,7 +62,8 @@
       "group": "Workbooks",
       "pages": [
         "main/workbooks/intro",
-        "main/workbooks/deploy"
+        "main/workbooks/deploy",
+        "main/workbooks/websockets"
       ]
     },
     {

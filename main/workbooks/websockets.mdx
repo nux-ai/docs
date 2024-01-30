@@ -1,0 +1,46 @@
+---
+title: "Stream Websockets"
+icon: "plug"
+---
+
+In some cases, the execution of blocks in a workbook run can take more time. This could be due to complex computations, large data processing, or other resource-intensive tasks. In such scenarios, waiting for the completion of the run to get the results might not be the most efficient approach.
+
+By using webhooks, you can set up your application to be notified when the run is completed. This allows your application to continue with other tasks without being blocked by the long-running process.
+
+```javascript
+// Define the URL and headers
+const url = `https://api.nux.ai/v1/run/workbook/${workbook_id}`;
+const headers = {
+    'Authorization': `Bearer ${api_key}`,
+    'websocket_id': `${websocket_id}`, // client should create a unique ID
+    'Content-Type': 'application/json'
+};
+
+// Define the data
+const data = {
+    "parameters": {
+        "foo": "bar",
+    }
+};
+
+// Make the HTTP request to run the workbook
+fetch(url, {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch((error) => console.error('Error:', error));
+
+// Listen on the WebSocket
+const ws = new WebSocket(`ws://api.nux.ai/ws/${websocket_id}`);
+
+ws.onopen = () => {
+    console.log('WebSocket is connected');
+};
+
+ws.onmessage = (event) => {
+    console.log('Received data: ' + event.data);
+};
+```
