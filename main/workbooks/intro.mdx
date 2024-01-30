@@ -60,8 +60,6 @@ Once complete it will return an array of objects that contain each block's outpu
 
 ### Streaming
 
-When you call a workbook, sometimes it can take longer to run. To receive streaming updates create a `websocket_id` via `/v1/ws/`
+When you call a workbook, sometimes it can take longer to run. To receive streaming updates open and listen in on a `websocket` via `/ws/`
 
-Then when you can the workbook, supply the `websocket_id` in the parameters like `?websocket_id={ID}`
-
-Then open a websocket like: `ws://api.nux.ai/ws/{ID}` and block execution outputs will be streamed in real-time.  
+See the websocket page for more details: [Websockets](/main/workbooks/websockets)

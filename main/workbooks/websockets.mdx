@@ -8,39 +8,54 @@ In some cases, the execution of blocks in a workbook run can take more time. Thi
 By using webhooks, you can set up your application to receive the output of blocks in a workbook as they're complete. This means you don't have to wait until the entire workbook is finished in order to process the response. 
 
 ```javascript
-// Define the URL and headers
-const url = `https://api.nux.ai/v1/run/workbook/${workbook_id}`;
-const headers = {
+// Define the URL and headers for WebSocket creation
+const wsUrl = 'https://api.nux.ai/v1/ws';
+const wsHeaders = {
     'Authorization': `Bearer ${api_key}`,
-    'websocket_id': `${websocket_id}`, // client should create a unique ID
-    'Content-Type': 'application/json'
 };
 
-// Define the data
-const data = {
-    "parameters": {
-        "foo": "bar",
-    }
-};
-
-// Make the HTTP request to run the workbook
-fetch(url, {
+// Make the HTTP request to create the WebSocket
+fetch(wsUrl, {
     method: 'POST',
-    headers: headers,
-    body: JSON.stringify(data)
+    headers: wsHeaders,
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+    // Use the WebSocket ID from the response to create a WebSocket connection
+    const ws = new WebSocket(`wss://api.nux.ai/v1/ws/${data.websocket_id}`);
+
+    ws.onopen = () => {
+        console.log('WebSocket is connected');
+    };
+
+    ws.onmessage = (event) => {
+        console.log('Received data: ' + event.data);
+    };
+
+    // Define the URL and headers for the workbook run
+    const url = `https://api.nux.ai/v1/run/workbook/${workbook_id}`;
+    const headers = {
+        'Authorization': `Bearer ${api_key}`,
+        'websocket_id': data.websocket_id, // Use the WebSocket ID from the response
+        'Content-Type': 'application/json'
+    };
+
+    // Define the data
+    const runData = {
+        "parameters": {
+            "foo": "bar",
+        }
+    };
+
+    // Make the HTTP request to run the workbook
+    return fetch(url, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(runData)
+    });
 })
 .then(response => response.json())
 .then(data => console.log(data))
 .catch((error) => console.error('Error:', error));
-
-// Listen on the WebSocket
-const ws = new WebSocket(`ws://api.nux.ai/ws/${websocket_id}`);
-
-ws.onopen = () => {
-    console.log('WebSocket is connected');
-};
-
-ws.onmessage = (event) => {
-    console.log('Received data: ' + event.data);
-};
 ```
