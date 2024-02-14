@@ -71,46 +71,22 @@
       "pages": [
         "main/blocks/intro",
         {
-          "group": "Model Inference",
-          "pages": [
-            "main/models/intro",
-            "main/models/supported",
-            "main/models/configure"
-          ]
-        },
-        {
           "group": "Data Integration",
           "pages": [
-            "main/data/intro",
-            "main/data/configure",
-            "main/data/loaders/intro"
+            {
+              "group": "Integrations",
+              "pages": [
+                "main/data/integrations/mongodb"
+              ]
+            }
           ]
         },
         {
           "group": "Code Execution",
           "pages": [
-            "main/code/intro",
-            "main/code/configure"
+            "main/code/intro"
           ]
         }
-      ]
-    },
-    {
-      "group": "Workflows",
-      "pages": [
-        "main/workflows/intro"
-      ]
-    },
-    {
-      "group": "Triggers",
-      "pages": [
-        "main/triggers/intro"
-      ]
-    },
-    {
-      "group": "Synchronize",
-      "pages": [
-        "main/synchronize/intro"
       ]
     }
   ],
