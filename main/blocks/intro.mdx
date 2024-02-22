@@ -3,25 +3,31 @@ title: "Introduction to Blocks"
 icon: "cube"
 ---
 
-Blocks are contained pieces of logic that can consist of data, model or code.
+With the execption of `tools`, blocks are stateless, executable, modular blocks of logic. 
+They can be _database queries_, _model inference_ or generic _python glue code_. 
 
-All blocks have `inputs`, `settings`, and `response_output`
+All blocks have `inputs`, `settings`, and a `response_output`.
 
 ## Inputs
 
-Inputs for the block
+This is what you provide to the block, it can be prompts, queries, inputs and more. 
+
+[Read more](/main/blocks/configure)
 
 ## Settings
 
-Settings for the block
+Settings are how you define things like hyperparameters for models, embedding models for DB queries, and libraries for python code.
+
+[Read more](/main/blocks/configure)
 
 ## Response Output
 
-Output you'd like the block to adhere to. This is critical to ensuring each block's execution durability. 
+Output you'd like the block to adhere to. This is critical to ensuring each block's execution consistency. 
+
+[Read more](/main/blocks/configure)
 
 
 ## Variables
-
 
 Every block has access to `parameters`, and `blocks`.
 

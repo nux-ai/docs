@@ -15,7 +15,7 @@ Users can test and experiment workbooks within the NUX Workbook builder then int
 Users can supply request parameters when calling their workbook, so that each workbook is fully modular. 
 
 ### Blocks
-Blocks make up NUX Workbooks. They are capable of performing functions like **code execution**, **model inference**, or **data processing**. Blocks are designed to be interconnected, facilitating the creation of complex, multi-step chains.
+Blocks make up NUX Workbooks. They are capable of performing functions like **code execution**, **model inference**, or **data processing**. Blocks are stateless and designed to be interconnected, facilitating the creation of complex, multi-step chains.
 
 The output of each block is accessible across the entire workbook via handlebar tags and standard dot notation: `{{blocks.block_name.key}}`
 
@@ -25,8 +25,21 @@ The output of each block is accessible across the entire workbook via handlebar 
 ### Model Inference
 Model Inference in NUX Workbooks involves using machine learning models for data analysis and predictions. It enables the application of algorithms like language models or image recognition within a workflow. Users can use managed models like GPT and Claude or bring their own like a fine-tuned LLama2 model. 
 
+[Read More](main/model/intro)
+
 ### Code Execution
 The Code Execution Blocks in NUX Workbooks allows for running custom _glue code_. It's often used for data manipulation, transformation, and specific computational tasks. Packages such as _pandas, requests, and scikit_ can be added to a code block. 
 
+[Read More](main/code/intro)
+
+
 ### Data Integration
 The Data Integration Blocks in NUX Workbooks enables connecting to and using data from different sources. This includes KNN data stores like Weaviate and Pinecone, external APIs (GET & POST), and databases.
+
+[Read More](main/data/intro)
+
+
+### NUX Tools
+Tools are a special type of block that are actually stateful. They are services that stay on 24/7. An example of a stateful NUX tool is a document parser because it requires a virtual machine to always be running. This is necessary to deliver sub `200ms` response times. 
+
+[Read More](main/tool/intro)

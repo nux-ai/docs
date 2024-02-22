@@ -14,13 +14,13 @@
     "default": "light"
   },
   "colors": {
-    "primary": "#9EC8B9",
-    "light": "#9EC8B9",
-    "dark": "#092635",
-    "ultraLight": "#9EC8B9",
+    "primary": "#05826B",
+    "light": "#05826B",
+    "dark": "#191920",
+    "ultraLight": "#05826B",
     "ultraDark": "#061c26",
     "background": {
-      "dark": "#061c26"
+      "dark": "#191920"
     }
   },
   "topbarLinks": [
@@ -73,12 +73,7 @@
         {
           "group": "Data Integration",
           "pages": [
-            {
-              "group": "Integrations",
-              "pages": [
-                "main/data/integrations/mongodb"
-              ]
-            }
+            "main/data/integrations/mongodb"
           ]
         },
         {

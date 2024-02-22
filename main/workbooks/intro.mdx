@@ -4,7 +4,7 @@ icon: "book-open"
 ---
 
 Under the hood, workbooks are an LLM-powered DAG (Directed Acyclic Graph). 
-Each block in the workbook is a `node` in the DAG, where the output of other blocks and the workbook's request parameters (when called) are the `edges`.
+Each block in the workbook is a stateless `node` in the DAG, where the output of other blocks and the workbook's request parameters (when called) are the `edges`.
 
 This is powerful because if a block's execution fails other blocks can still run if they don't depend on the block that failed.
 

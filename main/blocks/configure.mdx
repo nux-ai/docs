@@ -2,3 +2,60 @@
 title: "Configure Block Settings"
 icon: "gear"
 ---
+
+
+## Inputs
+
+#### URL
+
+This is used for special `tools` blocks like `file_parser`
+
+```json
+{
+  "property": "url",
+  "type": "text",
+  "constraints": [
+    {
+      "validator_type": "max_length",
+      "value": 1000
+    }
+  ],
+  "value": ""
+}
+```
+
+#### Code
+
+Used for Python blocks and Database blocks like `MongoDB`
+
+```json
+{
+  "property": "code",
+  "value": "def function(parameters, blocks):\n    return('hello world')",
+  "type": "code",
+  "constraints": [
+    {
+      "validator_type": "max_length",
+      "value": 5000
+    }
+  ]
+}
+```
+
+#### Prompt
+
+
+
+```json
+{
+  "property": "prompt",
+  "type": "text",
+  "constraints": [
+    {
+      "validator_type": "max_length",
+      "value": 1000
+    }
+  ],
+  "value": "You are a pioneer, give me tips"
+}
+```
