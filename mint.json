@@ -71,6 +71,12 @@
       "pages": [
         "main/blocks/intro",
         {
+          "group": "Model Inference",
+          "pages": [
+            "main/model/intro"
+          ]
+        },
+        {
           "group": "Data Integration",
           "pages": [
             "main/data/integrations/mongodb"

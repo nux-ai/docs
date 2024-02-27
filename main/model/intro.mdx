@@ -1,0 +1,30 @@
+---
+title: "Introduction to Models"
+icon: "brain"
+---
+
+Models are one type of block you can combine in your NUX workbooks. They can span any modality from text generation like `ChatGPT` to image generation like `Clip`.
+
+## Response Format Builder
+
+When integrating NUX Workbooks into your application via API, it's important that it accepts a consistent output shape, called `response_format` in the API. 
+
+NUX Workbooks allow you to define the shape of the JSON using LLM `function calling`. 
+
+### Define the Schema
+
+First you want to define the name nd description of the entire schema. This is the parent of the full JSON so it should represent the entire payload
+
+### Add New Fields
+
+You can add new fields and the JSON adheres to standard JSON schemas. 
+
+- object
+- array
+- string 
+- number
+- boolean
+
+### Include Metadata
+
+Every field has a name and description. The name is the `key` in the json returned and the description tells the LLM what to present the value as. 
